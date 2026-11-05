@@ -1,0 +1,34 @@
+# 数据与中间产物（体积大，不入库；只忽略仓库根的 data/，防 JDsearch 的 .txt 等大文件误入库）
+# ⚠️ 必须是 "/data/"（前导斜杠）—— 写成 "data/" 会匹配任意层级的 data/ 目录，
+#    从而把 src/data/ 下的源文件也静默忽略掉（2026-10-08 实测踩坑）
+/data/
+*.csv
+*.parquet
+
+# 模型权重
+*.pth
+*.ckpt
+models_saved/
+
+# 环境与密钥
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# 前端
+node_modules/
+dist/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 前端构建产物与依赖（显式路径，防止未来根级通配调整时漏掉 frontend/）
+frontend/node_modules/
+frontend/dist/

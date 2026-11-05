@@ -1,0 +1,12 @@
+pandas>=2.2
+polars>=1.0
+pymysql>=1.1
+SQLAlchemy>=2.0
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.7
+python-jose[cryptography]>=3.3
+passlib[bcrypt]>=1.7
+pytest>=8.0
+recbole>=1.2
+torch>=2.2
